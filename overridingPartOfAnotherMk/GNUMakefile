@@ -1,0 +1,9 @@
+# 这里调用Makefile里定义的target
+
+foo : force
+	@echo "The target is in GNUMakefile\n"
+
+% : force
+	@$(MAKE) -f Makefile $@
+
+force : ;
